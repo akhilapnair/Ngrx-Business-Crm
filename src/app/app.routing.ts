@@ -4,11 +4,12 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 
 const appRoutes = [
+   { path: '', redirectTo: 'customer', pathMatch: 'full'},
       { path: '', component: AppLayoutComponent,
         children: [
           {
             path: 'customer',
-            loadChildren: 'app/app-modules/customer.module#CustomerModule'
+            loadChildren: 'app/app-modules/customer/customer.module#CustomerModule'
           }
         ],
       }, ];
