@@ -11,7 +11,7 @@ const appRoutes = [
             loadChildren: 'app/app-modules/customer.module#CustomerModule'
           }
         ],
-      },]
+      }, ];
 @NgModule({
   imports: [
      RouterModule.forRoot(appRoutes)
