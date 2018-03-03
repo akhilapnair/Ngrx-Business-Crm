@@ -1,1 +1,1 @@
-export * from './app-login.reducers';
+export * from './products.reducers';
