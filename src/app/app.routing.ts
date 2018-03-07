@@ -9,7 +9,7 @@ const appRoutes = [
           children: [
             { path: 'customer', loadChildren: 'app/app-modules/customer/customer.module#CustomerModule' },
             { path: 'products', loadChildren: 'app/app-modules/products/products.module#ProductsModule' }
-          ],
+          ]
       },
 ];
 @NgModule({
