@@ -4,19 +4,14 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 
 const appRoutes = [
-   { path: '', redirectTo: 'customer', pathMatch: 'full'},
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
       { path: '', component: AppLayoutComponent,
-        children: [
-          {
-            path: 'customer',
-            loadChildren: 'app/app-modules/customer/customer.module#CustomerModule'
-          },
-          {
-            path: 'products',
-            loadChildren: 'app/app-modules/products/products-list.module#ProductsModule'
-          }
-        ],
-      }, ];
+          children: [
+            { path: 'customer', loadChildren: 'app/app-modules/customer/customer.module#CustomerModule' },
+            { path: 'products', loadChildren: 'app/app-modules/products/products-list.module#ProductsModule' }
+          ],
+      },
+];
 @NgModule({
   imports: [
      RouterModule.forRoot(appRoutes)
