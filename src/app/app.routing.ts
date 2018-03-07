@@ -10,6 +10,10 @@ const appRoutes = [
           {
             path: 'customer',
             loadChildren: 'app/app-modules/customer/customer.module#CustomerModule'
+          },
+          {
+            path: 'products',
+            loadChildren: 'app/app-modules/products/products-list.module#ProductsModule'
           }
         ],
       }, ];
