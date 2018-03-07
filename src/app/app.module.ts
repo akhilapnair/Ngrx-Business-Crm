@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
-import { ProductsModule } from './app-modules/products/products-list.module';
+import { ProductsModule } from './app-modules/products/products.module';
 
 
 @NgModule({

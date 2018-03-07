@@ -8,7 +8,7 @@ const appRoutes = [
       { path: '', component: AppLayoutComponent,
           children: [
             { path: 'customer', loadChildren: 'app/app-modules/customer/customer.module#CustomerModule' },
-            { path: 'products', loadChildren: 'app/app-modules/products/products-list.module#ProductsModule' }
+            { path: 'products', loadChildren: 'app/app-modules/products/products.module#ProductsModule' }
           ],
       },
 ];
