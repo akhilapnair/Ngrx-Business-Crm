@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ProductListComponent } from './components/products-list/products-list.component';
-import { ProductsRoutingModule } from './products-list.routing';
+import { ProductsRoutingModule } from './products.routing';
 @NgModule({
   imports: [
     FormsModule,
