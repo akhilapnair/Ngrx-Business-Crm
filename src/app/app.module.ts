@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
 import { ProductsModule } from './app-modules/products/products.module';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProductsModule } from './app-modules/products/products.module';
     BrowserAnimationsModule,
     MatSidenavModule,
     AppRoutingModule,
-    ProductsModule
+    ProductsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

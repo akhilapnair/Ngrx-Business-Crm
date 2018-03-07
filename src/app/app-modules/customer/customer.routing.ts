@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
 
 const customerRoutes: Routes = [
-    { path: '', component: CustomerListComponent },
+    { path: 'customerlist', component: CustomerListComponent },
   ];
 
   @NgModule({

@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-app-layout',
@@ -8,5 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppLayoutComponent {
+  showFiller = false;
 
 }
