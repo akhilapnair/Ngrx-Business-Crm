@@ -3,6 +3,7 @@
   width: 54px;
   background:rgba(0, 0, 0, 0.84);
   transition: width 1s;
+  position: fixed;
 }
 .side-nav button {
   background: transparent;
@@ -28,4 +29,10 @@
 }
 .side-nav .mat-icon {
  line-height: 0;
+}
+.toolbar {
+  background: #e6e2e2;
+  height: 30px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
 }
