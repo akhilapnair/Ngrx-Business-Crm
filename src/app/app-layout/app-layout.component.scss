@@ -17,12 +17,15 @@
 }
 .side-nav p {
   display: none;
+  line-height: 2;
 }
 .sideNavExpand p {
   display: inline-block;
   transition: width 1s;
+  line-height: 2;
+  padding-left: 24px;
+  line-height: 0
 }
-// .side-nav .mat-icon {
-//   padding: 15px 1px 1px 29px;
-//   color: white;
-// }
+.side-nav .mat-icon {
+ line-height: 0;
+}
