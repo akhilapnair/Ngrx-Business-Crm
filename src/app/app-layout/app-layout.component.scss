@@ -1,4 +1,28 @@
-.example-container {
-  width: 100%;
+.side-nav {
   height: 100vh;
+  width: 54px;
+  background:rgba(0, 0, 0, 0.84);
+  transition: width 1s;
 }
+.side-nav button {
+  background: transparent;
+  border: transparent;
+  color: white;
+}
+.side-nav li {
+  color: white;
+  list-style: none;
+  padding: 20px 0px 0px 14px;
+  display: block;
+}
+.side-nav p {
+  display: none;
+}
+.sideNavExpand p {
+  display: inline-block;
+  transition: width 1s;
+}
+// .side-nav .mat-icon {
+//   padding: 15px 1px 1px 29px;
+//   color: white;
+// }

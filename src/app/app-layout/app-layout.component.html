@@ -1,17 +1,25 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-   <h3>Logo</h3>
-    <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button> -->
-  </mat-drawer>
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </div>
 
-</mat-drawer-container>
+<div class="side-nav" id="nav">
+  <li>
+    <div (click)="sidenav()">
+      <mat-icon>menu</mat-icon>
+    </div>
+  </li>
+  <li>
+    <mat-icon>supervisor_account</mat-icon>
+    <p>sdfszd</p>
+  </li>
+  <li>
+    <mat-icon>add_shopping_cart</mat-icon>
+    <p>sdfszd</p>
+  </li>
+</div>
+
+
+
+
+
+
 <div>
   <router-outlet></router-outlet>
 </div>
