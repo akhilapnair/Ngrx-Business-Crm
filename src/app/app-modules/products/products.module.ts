@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { ProductListComponent } from './components/products-list/products-list.component';
+
 import { ProductsRoutingModule } from './products.routing';
+import { ProductListComponent } from './containers/product-list/product-list.component';
 @NgModule({
   imports: [
     FormsModule,

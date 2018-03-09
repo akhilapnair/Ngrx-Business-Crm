@@ -1,7 +1,30 @@
-<!-- <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
-    <mat-drawer-content>Main content</mat-drawer-content>
-</mat-drawer-container> -->
-<div>
-  <router-outlet></router-outlet>
+<div class="side-nav" id="nav">
+  <li>
+    <div (click)="sidenav()">
+      <mat-icon>menu</mat-icon>
+    </div>
+  </li>
+  <li>
+    <mat-icon>supervisor_account</mat-icon>
+    <p>Customer</p>
+  </li>
+  <li>
+    <mat-icon>add_shopping_cart</mat-icon>
+    <p>Products</p>
+  </li>
+  <li>
+    <mat-icon>insert_chart</mat-icon>
+    <p>Dashboard</p>
+  </li>
+  <li>
+    <mat-icon>launch</mat-icon>
+    <p>Log Out</p>
+  </li>
 </div>
+<div class="card toolbar">
+  <p class="d-flex justify-content-end pt-2 pb-2 pr-2">
+    <mat-icon>launch</mat-icon>
+  </p>
+</div>
+  <router-outlet></router-outlet>
+

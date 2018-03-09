@@ -1,6 +1,49 @@
-.example-container {
-    width: 400px;
-    height: 200px;
-    margin: 10px;
-    border: 1px solid #555;
-  }
+.side-nav {
+  height: 100vh;
+  width: 48px;
+  background:rgba(0, 0, 0, 0.84);
+  transition: width 1s;
+  position: fixed;
+  z-index: 1;
+}
+.side-nav button {
+  background: transparent;
+  border: transparent;
+  color: white;
+}
+.side-nav li {
+  color: white;
+  list-style: none;
+  padding: 24px 0px 9px 11px;
+  line-height: 0;
+  display: flex;
+}
+.side-nav p {
+  display: none;
+}
+.sideNavExpand p {
+  display: inline-block;
+  transition: width 1s;
+  padding-left: 24px;
+  line-height: 0;
+  font-size: 14px;
+}
+.mat-icon {
+ line-height: 0;
+ cursor: pointer;
+}
+.toolbar {
+  background: #e6e2e2;
+  height: 48px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
+}
+.card {
+  border-radius: initial;
+}
+.toolbar p {
+  margin-bottom: 0px;
+}
+.toolbar .mat-icon{ 
+  line-height: 1.2;
+}
