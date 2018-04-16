@@ -3,11 +3,13 @@ import { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
 
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerAddComponent } from './components/customer-add/customer-add.component';
 
 const customerRoutes: Routes = [
-  // { path: '', redirectTo: 'customer-add', pathMatch: 'full' },
+  { path: '', redirectTo: 'customer-list', pathMatch: 'full' },
   { path: 'customer-list', component: CustomerListComponent },
+  { path: 'customer-detail', component: CustomerDetailsComponent },
   { path: 'customer-add', component: CustomerAddComponent }
 ];
 @NgModule({

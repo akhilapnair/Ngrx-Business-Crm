@@ -1,11 +1,12 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-customeradd',
+  selector: 'app-customer-add',
   templateUrl: './customer-add.component.html',
-  styleUrls: ['./customer-add.component.scss']
+  styleUrls: ['./customer-add.component.css']
 })
-export class CustomerAddComponent {}
+export class CustomerAddComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+}
