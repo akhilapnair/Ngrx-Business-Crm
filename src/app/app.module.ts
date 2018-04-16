@@ -1,24 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
 import { ProductsModule } from './app-modules/products/products.module';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomerDetailsComponent } from './customer-details/customer-details.component';
-import { CustomerAddComponent } from './customer-add/customer-add.component';
-
+import { CustomerDetailsComponent } from './app-modules/customer/components/customer-details/customer-details.component';
+import { CustomerAddComponent } from './app-modules/customer/components/customer-add/customer-add.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AppLayoutComponent,
-    CustomerDetailsComponent,
-    CustomerAddComponent
-  ],
+  declarations: [AppComponent, AppLayoutComponent],
   imports: [
     BrowserModule,
     BrowserModule,
@@ -31,4 +25,4 @@ import { CustomerAddComponent } from './customer-add/customer-add.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

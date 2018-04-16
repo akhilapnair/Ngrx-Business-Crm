@@ -8,8 +8,7 @@ import { CustomerAddComponent } from './components/customer-add/customer-add.com
 
 const customerRoutes: Routes = [
   { path: '', redirectTo: 'customer-list', pathMatch: 'full' },
-  { path: 'customer-list', component: CustomerListComponent },
-  { path: 'customer-detail', component: CustomerDetailsComponent },
+  { path: 'customer-details', component: CustomerDetailsComponent },
   { path: 'customer-add', component: CustomerAddComponent }
 ];
 @NgModule({
