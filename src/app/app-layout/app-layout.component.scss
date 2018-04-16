@@ -1,7 +1,15 @@
+#main {
+  transition: margin-left 0.4s;
+  // transition: margin-right .4s;
+  margin-left: 4em;
+  margin-top: 4em;
+  margin-right: 1em;
+  overflow: hidden;
+}
 .side-nav {
   height: 100vh;
   width: 48px;
-  background:rgba(0, 0, 0, 0.84);
+  background: rgba(0, 0, 0, 0.84);
   transition: width 1s;
   position: fixed;
   z-index: 1;
@@ -29,14 +37,15 @@
   font-size: 14px;
 }
 .mat-icon {
- line-height: 0;
- cursor: pointer;
+  line-height: 0;
+  cursor: pointer;
 }
 .toolbar {
   background: #e6e2e2;
   height: 48px;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px,
+    rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
 }
 .card {
   border-radius: initial;
@@ -44,6 +53,6 @@
 .toolbar p {
   margin-bottom: 0px;
 }
-.toolbar .mat-icon{ 
+.toolbar .mat-icon {
   line-height: 1.2;
 }
