@@ -9,8 +9,6 @@ import { AppRoutingModule } from './app.routing';
 import { ProductsModule } from './app-modules/products/products.module';
 import { MatIconModule } from '@angular/material/icon';
 import { CustomerDetailsComponent } from './app-modules/customer/components/customer-details/customer-details.component';
-import { CustomerAddComponent } from './app-modules/customer/components/customer-add/customer-add.component';
-
 @NgModule({
   declarations: [AppComponent, AppLayoutComponent],
   imports: [
