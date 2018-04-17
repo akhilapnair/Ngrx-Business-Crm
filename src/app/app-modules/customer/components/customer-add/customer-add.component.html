@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="card">
-    <form>
+    <form [formGroup]="customerForm" (ngsubmit)="addCustomer(customerForm.value)">
       <div class="p-4">
         <div class="d-flex">
           <div class="form-group col-sm-3">
@@ -8,7 +8,7 @@
               customer id
             </label>
             <div>
-              <input type="text" class="form-control" id="custid" placeholder="Customer ID">
+              <input type="text" class="form-control" id="custid" placeholder="Customer ID" formControlName="customerid">
             </div>
           </div>
           <div class="form-group  col-sm-3">
@@ -16,7 +16,7 @@
               Customer Name
             </label>
             <div>
-              <input type="text" class="form-control" id="name" placeholder="Customer Name">
+              <input type="text" class="form-control" id="name" placeholder="Customer Name" formControlName="customername">
             </div>
           </div>
           <div class="form-group  col-sm-3">
@@ -24,7 +24,7 @@
               address
             </label>
             <div>
-              <input type="text" class="form-control" id="address" placeholder="Address">
+              <input type="text" class="form-control" id="address" placeholder="Address" formControlName="address">
             </div>
           </div>
           <div class="form-group  col-sm-3">
@@ -32,7 +32,7 @@
               contact
             </label>
             <div>
-              <input type="text" class="form-control" id="contact" placeholder="Contact Number">
+              <input type="text" class="form-control" id="contact" placeholder="Contact Number" formControlName="contactno">
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
               email
             </label>
             <div>
-              <input type="text" class="form-control" id="custid" placeholder="Email">
+              <input type="text" class="form-control" id="custid" placeholder="Email" formControlName="email">
             </div>
           </div>
           <div class="form-group  col-sm-3">
