@@ -2,8 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFirestore } from 'angularfire2/firestore';
-// import { AngularFireDatabaseModule } from 'angularFire2/database';
+import { environment } from '../environments/environment';
+// export const firebaseConfig = environment.firebaseConfig;
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
@@ -21,6 +28,7 @@ import { CustomerDetailsComponent } from './app-modules/customer/components/cust
     AppRoutingModule,
     ProductsModule,
     MatIconModule
+    // StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   providers: [],
   bootstrap: [AppComponent]
