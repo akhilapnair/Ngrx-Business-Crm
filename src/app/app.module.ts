@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
+
 // export const firebaseConfig = environment.firebaseConfig;
 
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -27,7 +29,10 @@ import { CustomerDetailsComponent } from './app-modules/customer/components/cust
     MatSidenavModule,
     AppRoutingModule,
     ProductsModule,
-    MatIconModule
+    MatIconModule,
+    AngularFireAuthModule,
+    AngularFireModule,
+    AngularFireDatabaseModule
     // StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   providers: [],
