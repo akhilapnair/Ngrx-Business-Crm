@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase } from 'angularfire2/database';
 @Component({
   selector: 'app-customer-add',
   templateUrl: './customer-add.component.html',
@@ -7,8 +9,10 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class CustomerAddComponent implements OnInit {
   customerForm: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  customerObservable: Observable<any[]>;
+  constructor(private fb: FormBuilder, private db: AngularFireDatabase) {}
   ngOnInit() {
+    this.customerObservable = this.getData('/product');
     this.customerForm = this.fb.group({
       customerid: ['', Validators.required],
       customername: ['', Validators.required],
@@ -20,6 +24,9 @@ export class CustomerAddComponent implements OnInit {
       quantity: ['', Validators.required],
       prproductdescriptionice: ['', Validators.required]
     });
+  }
+  getData(listPath): Observable<any[]> {
+    return this.db.list(listPath).valueChanges();
   }
   addCustomer(value: any) {
     console.log(value);

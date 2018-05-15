@@ -30,6 +30,7 @@ import { CustomerDetailsComponent } from './app-modules/customer/components/cust
     AppRoutingModule,
     ProductsModule,
     MatIconModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireModule,
     AngularFireDatabaseModule
