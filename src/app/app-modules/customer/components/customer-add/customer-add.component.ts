@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { CustomerServiceService } from '../../../../customer-service.service';
 @Component({
   selector: 'app-customer-add',
   templateUrl: './customer-add.component.html',
-  styleUrls: ['./customer-add.component.css']
+  styleUrls: ['./customer-add.component.css'],
+  providers: [CustomerServiceService]
 })
 export class CustomerAddComponent implements OnInit {
   customerForm: FormGroup;
-  customerObservable: Observable<any[]>;
-  constructor(private fb: FormBuilder, private db: AngularFireDatabase) {}
+  customerList: AngularFireList<any>;
+  constructor(private fb: FormBuilder, private service: CustomerServiceService) {}
   ngOnInit() {
-    this.customerObservable = this.getData('/product');
+    const x = this.service.getData().subscribe(data => console.log(data));
+    // console.log(x);
     this.customerForm = this.fb.group({
       customerid: ['', Validators.required],
       customername: ['', Validators.required],
@@ -24,9 +27,6 @@ export class CustomerAddComponent implements OnInit {
       quantity: ['', Validators.required],
       prproductdescriptionice: ['', Validators.required]
     });
-  }
-  getData(listPath): Observable<any[]> {
-    return this.db.list(listPath).valueChanges();
   }
   addCustomer(value: any) {
     console.log(value);
