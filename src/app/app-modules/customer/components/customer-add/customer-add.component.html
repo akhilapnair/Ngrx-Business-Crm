@@ -19,7 +19,7 @@
             <div>
               <input type="text" class="form-control" id="name" placeholder="Customer Name" formControlName="customername">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('customername').errors && customerForm.get('customername').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('customername').errors && customerForm.get('customername').touched">Please enter the customer name</small>
           </div>
           <div class="form-group  col-sm-3">
             <label class="col-form-label sr-only" for="address">
@@ -28,7 +28,7 @@
             <div>
               <input type="text" class="form-control" id="address" placeholder="Address" formControlName="address">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('address').errors && customerForm.get('address').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('address').errors && customerForm.get('address').touched">Please enter the customer address</small>
           </div>
           <div class="form-group  col-sm-3">
             <label class="col-form-label sr-only" for="contact">
@@ -37,7 +37,7 @@
             <div>
               <input type="text" class="form-control" id="contact" placeholder="Contact Number" formControlName="contactno">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('contactno').errors && customerForm.get('contactno').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('contactno').errors && customerForm.get('contactno').touched">Please enter the contact no</small>
           </div>
         </div>
         <div class="d-flex">
@@ -48,34 +48,34 @@
             <div>
               <input type="text" class="form-control" id="custid" placeholder="Email" formControlName="email">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('email').errors && customerForm.get('email').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('email').errors && customerForm.get('email').touched">Please enter the emailid</small>
           </div>
           <div class="form-group  col-sm-3">
             <label class="col-form-label sr-only" for="product id">
               product id
             </label>
             <div>
-              <input type="text" class="form-control" id="custid" placeholder="Product Id">
+              <input type="text" class="form-control" id="custid" placeholder="Product Id" formControlName="productid">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('email').errors && customerForm.get('email').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('productid').errors && customerForm.get('productid').touched">Please enter the product id</small>
           </div>
           <div class="form-group  col-sm-3">
             <label class="col-form-label sr-only" for="price">
               price
             </label>
             <div>
-              <input type="text" class="form-control" id="price" placeholder=" Price">
+              <input type="text" class="form-control" id="price" placeholder=" Price" formControlName="price">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('email').errors && customerForm.get('email').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('price').errors && customerForm.get('price').touched">Please enter the price</small>
           </div>
           <div class="form-group col-sm-3">
             <label class=" col-form-label sr-only" for="qty">
               quantity
             </label>
             <div>
-              <input type="text" class="form-control" id="qty" placeholder="Quantity">
+              <input type="text" class="form-control" id="qty" placeholder="Quantity" formControlName="quantity">
             </div>
-            <small class="form-text text-danger" *ngIf="customerForm.get('email').errors && customerForm.get('email').touched">Please enter the customer id</small>
+            <small class="form-text text-danger" *ngIf="customerForm.get('quantity').errors && customerForm.get('quantity').touched">Please enter the quantity</small>
           </div>
         </div>
         <div class="form-group col-sm-12">
@@ -83,7 +83,7 @@
             Product Description
           </label>
           <div class="d-flex">
-            <textarea placeholder="Product Description" class="form-control"></textarea>
+            <textarea placeholder="Product Description" class="form-control" formControlName="productdescription"></textarea>
           </div>
         </div>
         <div class="d-flex justify-content-end mt-2 mr-3">
@@ -93,6 +93,6 @@
     </form>
   </div>
 </div>
-<!-- <div *ngFor="let course of customerObservable | async"> -->
-<!-- <div>data{{customerList.item}}</div> -->
+<!-- <div *ngFor="let product of x | async"> -->
+<div>data{{x |json}}</div>
 <!-- </div> -->

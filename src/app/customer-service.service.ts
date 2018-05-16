@@ -19,7 +19,7 @@ export class CustomerServiceService {
 
     return (
       this.db
-        .list('products/')
+        .list('/customer')
         .snapshotChanges()
         .take(1)
         // .pipe(

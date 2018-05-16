@@ -12,9 +12,10 @@ import { CustomerServiceService } from '../../../../customer-service.service';
 export class CustomerAddComponent implements OnInit {
   customerForm: FormGroup;
   customerList: AngularFireList<any>;
+  x: any;
   constructor(private fb: FormBuilder, private service: CustomerServiceService) {}
   ngOnInit() {
-    const x = this.service.getData().subscribe(data => console.log(data));
+    const x = this.service.getData().subscribe(data => (this.x = data));
     // console.log(x);
     this.customerForm = this.fb.group({
       customerid: ['', Validators.required],
@@ -25,7 +26,7 @@ export class CustomerAddComponent implements OnInit {
       productid: ['', Validators.required],
       price: ['', Validators.required],
       quantity: ['', Validators.required],
-      prproductdescriptionice: ['', Validators.required]
+      productdescription: ['', Validators.required]
     });
   }
   addCustomer(value: any) {
