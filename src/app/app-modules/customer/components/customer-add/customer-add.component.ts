@@ -13,6 +13,7 @@ export class CustomerAddComponent implements OnInit {
   customerForm: FormGroup;
   customerList: AngularFireList<any>;
   x: any;
+  name: any= 'Tanirika';
   constructor(private fb: FormBuilder, private service: CustomerServiceService) {}
   ngOnInit() {
     const x = this.service.getData().subscribe(data => (this.x = data));

@@ -9,7 +9,13 @@ import { CustomerAddComponent } from './components/customer-add/customer-add.com
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 
 @NgModule({
-  imports: [FormsModule, CommonModule, HttpModule, ReactiveFormsModule, CustomerRoutingModule],
+  imports: [
+    FormsModule,
+    CommonModule,
+    HttpModule,
+    ReactiveFormsModule,
+    CustomerRoutingModule
+  ],
   providers: [],
   declarations: [CustomerDetailsComponent, CustomerAddComponent]
 })

@@ -17,7 +17,8 @@
               Customer Name
             </label>
             <div>
-              <input type="text" class="form-control" id="name" placeholder="Customer Name" formControlName="customername">
+              <input type="text" class="form-control" id="name" placeholder="Customer Name" formControlName="customername" [(ngModel)]="name">
+              <span>{{name}}</span>
             </div>
             <small class="form-text text-danger" *ngIf="customerForm.get('customername').errors && customerForm.get('customername').touched">Please enter the customer name</small>
           </div>
