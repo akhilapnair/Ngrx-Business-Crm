@@ -5,7 +5,7 @@ import { ProductListComponent } from './containers/product-list/product-list.com
 import { BasicListComponent } from './components/basic-list/basic-list.component';
 
 const productsRoutes: Routes = [
-  { path: '', redirectTo: 'product-list', pathMatch: 'full' },
+  { path: '', redirectTo: 'customer-list', pathMatch: 'full' },
   { path: 'product-list', component: BasicListComponent }
 ];
 

@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { CustomerRoutingModule } from './customer.routing';
 import { CustomerAddComponent } from './components/customer-add/customer-add.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { CustomerListComponent } from './container/customer-list/customer-list.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,10 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
     CustomerRoutingModule
   ],
   providers: [],
-  declarations: [CustomerDetailsComponent, CustomerAddComponent]
+  declarations: [
+    CustomerDetailsComponent,
+    CustomerAddComponent,
+    CustomerListComponent
+  ]
 })
 export class CustomerModule {}

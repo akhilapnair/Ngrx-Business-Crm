@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -7,11 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './app-layout.component.html',
   styleUrls: ['./app-layout.component.scss']
 })
-
 export class AppLayoutComponent {
   public showMenu = false;
-
-
 
   sidenav() {
     this.showMenu = !this.showMenu;
@@ -24,5 +20,4 @@ export class AppLayoutComponent {
       // document.getElementById('nav').classList.add('sideNavExpand');
     }
   }
-
 }
