@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators
+} from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { CustomerServiceService } from '../../../../customer-service.service';
+import { CustomerServiceService } from '../../store/services/customer-service.service';
+
 @Component({
   selector: 'app-customer-add',
   templateUrl: './customer-add.component.html',
@@ -13,8 +19,11 @@ export class CustomerAddComponent implements OnInit {
   customerForm: FormGroup;
   customerList: AngularFireList<any>;
   x: any;
-  name: any= 'Tanirika';
-  constructor(private fb: FormBuilder, private service: CustomerServiceService) {}
+
+  constructor(
+    private fb: FormBuilder,
+    private service: CustomerServiceService
+  ) {}
   ngOnInit() {
     const x = this.service.getData().subscribe(data => (this.x = data));
     // console.log(x);
