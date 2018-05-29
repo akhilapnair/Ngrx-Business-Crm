@@ -12,8 +12,32 @@ export const initialState: CustomerState = {
   loading: false
 };
 
-export function reducers(state= initialState, action: fromAction.) {
-    // switch(){
-
-    // }
+export function reducers(
+  state = initialState,
+  action: fromAction.CustomerAction
+) {
+  switch (action.type) {
+    case fromAction.LOAD_CUSTOMER: {
+      return {
+        ...state,
+        loading: true
+      };
+    }
+    case fromAction.LOAD_CUSTOMER_SUCCESS: {
+      {
+        return {
+          ...state,
+          loading: false
+        };
+      }
+    }
+    case fromAction.LOAD_CUSTOMER_FAIL: {
+      {
+        return {
+          ...state,
+          loading: false
+        };
+      }
+    }
+  }
 }
