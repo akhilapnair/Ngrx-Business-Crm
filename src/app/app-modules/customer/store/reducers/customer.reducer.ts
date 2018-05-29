@@ -13,11 +13,12 @@ export const initialState: CustomerState = {
 };
 
 export function reducers(
-  state = initialState,
+  state = [initialState],
   action: fromAction.CustomerAction
 ) {
   switch (action.type) {
     case fromAction.LOAD_CUSTOMER: {
+      //   return [...state];
       return {
         ...state,
         loading: true
@@ -32,6 +33,14 @@ export function reducers(
       }
     }
     case fromAction.LOAD_CUSTOMER_FAIL: {
+      {
+        return {
+          ...state,
+          loading: false
+        };
+      }
+    }
+    case fromAction.ADD_CUSTOMER: {
       {
         return {
           ...state,
