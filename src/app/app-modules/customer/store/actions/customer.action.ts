@@ -19,12 +19,15 @@ export class AddCustomerFail implements Action {
 }
 export class LoadCustomer implements Action {
   readonly type = LOAD_CUSTOMER;
+  constructor(payload: any) {}
 }
 export class LoadCustomerSuccess implements Action {
   readonly type = LOAD_CUSTOMER_SUCCESS;
+  constructor(payload: any) {}
 }
 export class LoadCustomerFail implements Action {
   readonly type = LOAD_CUSTOMER_FAIL;
+  constructor(payload: any) {}
 }
 
 export type CustomerAction =
