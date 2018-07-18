@@ -11,5 +11,8 @@ export class AppLoginComponent implements OnInit {
 
   ngOnInit() {
   }
+  login(){
+    
+  }
 
 }

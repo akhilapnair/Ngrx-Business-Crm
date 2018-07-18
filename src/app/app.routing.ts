@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
+import { AppLoginComponent } from './app-login/app-login.component';
 
 
 const appRoutes = [
@@ -11,6 +12,7 @@ const appRoutes = [
             { path: 'products', loadChildren: 'app/app-modules/products/products.module#ProductsModule' }
           ]
       },
+      {path:'login',component: AppLoginComponent}
 ];
 @NgModule({
   imports: [

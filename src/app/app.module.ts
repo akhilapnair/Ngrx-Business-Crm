@@ -19,7 +19,7 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
 import { ProductsModule } from './app-modules/products/products.module';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomerDetailsComponent } from './app-modules/customer/components/customer-details/customer-details.component';
+import { AppLoginModule } from './app-login/app-login.module';
 @NgModule({
   declarations: [AppComponent, AppLayoutComponent],
   imports: [
@@ -29,6 +29,7 @@ import { CustomerDetailsComponent } from './app-modules/customer/components/cust
     MatSidenavModule,
     AppRoutingModule,
     ProductsModule,
+    AppLoginModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
