@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Login} from './login.Interface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-app-login',
   templateUrl: './app-login.component.html',
@@ -8,7 +9,7 @@ import {Login} from './login.Interface';
 })
 export class AppLoginComponent implements OnInit {
 LoginForm:FormGroup;
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private router:Router) { }
 
   ngOnInit() {
     this.LoginForm = this.fb.group({
@@ -20,6 +21,7 @@ LoginForm:FormGroup;
     console.log(value);
     if(value.email == 'akhi.prabha@gmail.com'&&value.password == 'akhila'){
 console.log('Login successfull')
+this.router.navigate(['customer/customer-list']);
     }
   }
 

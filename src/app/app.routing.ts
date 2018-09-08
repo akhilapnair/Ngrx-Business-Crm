@@ -8,8 +8,8 @@ const appRoutes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
       { path: '', component: AppLayoutComponent,
           children: [
-            { path: 'customer', loadChildren: 'app/app-modules/customer/customer.module#CustomerModule' },
-            { path: 'products', loadChildren: 'app/app-modules/products/products.module#ProductsModule' }
+            { path: 'customer', loadChildren: './app-modules/customer/customer.module#CustomerModule' },
+            { path: 'products', loadChildren: './app-modules/products/products.module#ProductsModule' }
           ]
       },
       {path:'login',component: AppLoginComponent}
