@@ -18,6 +18,7 @@ export function reducers(
 ) {
   switch (action.type) {
     case fromAction.LOAD_CUSTOMER: {
+      console.log('load')
       //   return [...state];
       return {
         ...state,
@@ -25,8 +26,10 @@ export function reducers(
       };
     }
     case fromAction.LOAD_CUSTOMER_SUCCESS: {
+    // console.log('success',this.customerList)
       {
         return {
+          
           ...state,
           loading: false
         };

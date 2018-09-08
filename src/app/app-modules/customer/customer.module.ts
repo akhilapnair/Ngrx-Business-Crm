@@ -8,6 +8,9 @@ import { CustomerRoutingModule } from './customer.routing';
 import { CustomerAddComponent } from './components/customer-add/customer-add.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerListComponent } from './container/customer-list/customer-list.component';
+import { CustomerServiceService, reducers, CustomerEffect } from './store';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   imports: [
@@ -15,9 +18,11 @@ import { CustomerListComponent } from './container/customer-list/customer-list.c
     CommonModule,
     HttpModule,
     ReactiveFormsModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    StoreModule.forFeature('products', reducers),
+    EffectsModule.forFeature([CustomerEffect])
   ],
-  providers: [],
+  providers: [CustomerServiceService],
   declarations: [
     CustomerDetailsComponent,
     CustomerAddComponent,

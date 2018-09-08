@@ -8,14 +8,6 @@ export class CustomerServiceService {
   customerList: AngularFireList<any>;
   constructor(private db: AngularFireDatabase) {}
   getData() {
-    //  this.db.list('product').snapshotChanges().map((data) = {
-    //    const res = data.map(data =>
-    //     {
-    //       return ...data.val();
-    //     };
-    //     return res;
-    //    );
-    //  })
 
     return (
       this.db

@@ -26,7 +26,7 @@ export class CustomerAddComponent implements OnInit {
   ) {}
   ngOnInit() {
     const x = this.service.getData().subscribe(data => (this.x = data));
-    // console.log(x);
+    console.log(x);
     this.customerForm = this.fb.group({
       customerid: ['', Validators.required],
       customername: ['', Validators.required],
