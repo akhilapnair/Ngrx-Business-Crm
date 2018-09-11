@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Login} from './login.Interface';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import * as Actions from './store/actions/app-login.action';
 @Component({
   selector: 'app-app-login',
   templateUrl: './app-login.component.html',
@@ -19,7 +20,7 @@ LoginForm:FormGroup;
     })
   }
   login(value){
-    // this.store.dispatch(new )
+    this.store.dispatch(new Actions.Login(value));
 //     console.log(value);
 //     if(value.email == 'akhi.prabha@gmail.com'&&value.password == 'akhila'){
 // console.log('Login successfull')
