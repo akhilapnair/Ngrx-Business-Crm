@@ -20,7 +20,7 @@ export function reducers(
 ) {
   switch (action.type) {
     case fromAction.LOGIN: {
-      console.log('load')
+      console.log('login')
       //   return [...state];
       return {
         ...state,

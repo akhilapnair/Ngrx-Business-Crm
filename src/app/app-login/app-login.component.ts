@@ -20,8 +20,9 @@ LoginForm:FormGroup;
     })
   }
   login(value){
-    this.store.dispatch(new Actions.Login(value));
-//     console.log(value);
+    this.store.dispatch({type: Actions.LOGIN})
+    // this.store.dispatch(new Actions.Login({payload:value}));
+    console.log(value);
 //     if(value.email == 'akhi.prabha@gmail.com'&&value.password == 'akhila'){
 // console.log('Login successfull')
 // this.router.navigate(['customer/customer-list']);
