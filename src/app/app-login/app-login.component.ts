@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Login} from './login.Interface';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-app-login',
   templateUrl: './app-login.component.html',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AppLoginComponent implements OnInit {
 LoginForm:FormGroup;
-  constructor(private fb:FormBuilder, private router:Router) { }
+  constructor(private fb:FormBuilder, private router:Router,private store: Store<any>) { }
 
   ngOnInit() {
     this.LoginForm = this.fb.group({
@@ -18,11 +19,12 @@ LoginForm:FormGroup;
     })
   }
   login(value){
-    console.log(value);
-    if(value.email == 'akhi.prabha@gmail.com'&&value.password == 'akhila'){
-console.log('Login successfull')
-this.router.navigate(['customer/customer-list']);
-    }
+    // this.store.dispatch(new )
+//     console.log(value);
+//     if(value.email == 'akhi.prabha@gmail.com'&&value.password == 'akhila'){
+// console.log('Login successfull')
+// this.router.navigate(['customer/customer-list']);
+//     }
   }
 
 }

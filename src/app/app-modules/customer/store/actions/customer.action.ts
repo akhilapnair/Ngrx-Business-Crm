@@ -27,7 +27,7 @@ export class LoadCustomerSuccess implements Action {
 }
 export class LoadCustomerFail implements Action {
   readonly type = LOAD_CUSTOMER_FAIL;
-  constructor(payload: any) {}
+  constructor() {}
 }
 
 export type CustomerAction =
