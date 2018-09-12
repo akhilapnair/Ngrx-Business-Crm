@@ -17,14 +17,22 @@ export class CustomerEffect {
     private customerservice: fromServices.CustomerServiceService,
     private _action$: Actions,
     private _store: Store<fromReducers.CustomerState>
-  ) {}
+  ) {
+this.customerservice.getData().subscribe(data=>{
+  console.log(data)
+})
+  }
+
   @Effect()
   loadCustomer$ = this._action$.ofType(fromActions.LOAD_CUSTOMER).pipe(
     switchMap(() => {
-      return this.customerservice.getData().pipe(
-        map(cust => new fromActions.LoadCustomerSuccess(cust))
-        // catchError(error => new fromActions.LoadCustomerFail())
-      );
+      return this.customerservice
+        .getData()
+        .pipe(
+          map(customer => new fromActions.LoadCustomerSuccess(customer)),
+          catchError(error => of(new fromActions.LoadCustomerFail()))
+        );
     })
   );
+
 }

@@ -13,12 +13,12 @@ export const initialState: CustomerState = {
 };
 
 export function reducers(
-  state = [initialState],
+  state = initialState,
   action: fromAction.CustomerAction
 ) {
   switch (action.type) {
     case fromAction.LOAD_CUSTOMER: {
-      console.log('load')
+      // console.log('load')
       //   return [...state];
       return {
         ...state,
@@ -26,10 +26,11 @@ export function reducers(
       };
     }
     case fromAction.LOAD_CUSTOMER_SUCCESS: {
-    // console.log('success',this.customerList)
+    console.log('success',this.customerList)
       {
+        const data = action.type;
+        console.log('data',data)
         return {
-          
           ...state,
           loading: false
         };

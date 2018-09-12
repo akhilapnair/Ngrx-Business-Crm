@@ -8,7 +8,7 @@ export class CustomerServiceService {
   customerList: AngularFireList<any>;
   constructor(private db: AngularFireDatabase) {}
   getData() {
-
+ 
     return (
       this.db
         .list('/customer')
@@ -29,4 +29,5 @@ export class CustomerServiceService {
 
     // return this.customerList;
   }
+ 
 }
